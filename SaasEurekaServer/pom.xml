@@ -18,7 +18,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>1.8</java.version>
-		<spring-cloud.version>Edgware.SR2</spring-cloud.version>
+		<spring-cloud.version>Dalston.RC1</spring-cloud.version>
 		<docker.image.prefix>saas-eureka-server</docker.image.prefix>
 	</properties>
 	<dependencies>
@@ -56,7 +56,7 @@
 				<artifactId>docker-maven-plugin</artifactId>
 				<configuration>
 					<imageName>${docker.image.prefix}/${project.artifactId}</imageName>
-					<dockerDirectory>${project.basedir}/src/main/resources</dockerDirectory>
+					<dockerDirectory>src/main/docker</dockerDirectory>
 					<resources>
 						<resource>
 							<targetPath>/</targetPath>
